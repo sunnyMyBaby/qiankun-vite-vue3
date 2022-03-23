@@ -1,0 +1,13 @@
+include: https://api-devcloud.sensetime.com/devops/v1/projects/215118318276067328/ci_contents/pipelines/caa171e1-9baf-4b2e-9507-7de3bc52baf7/content.yaml
+#---
+#  include:
+#    - project: "opencloud/cicd-template"
+#    file: "vue-web-template.yaml"
+#
+#  variables:
+#    APP_NAME: weixin-frontend
+#    FILES: ./dist
+#    # None k8s env
+#    PROD_SERVER: 10.198.23.40
+#    DEV_SERVER: 172.20.53.10
+#
