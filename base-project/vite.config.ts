@@ -67,6 +67,7 @@ export default defineConfig({
     jsxFragment: 'Fragment',
     jsxInject: "import { h } from 'vue';"
   },
+  build: { outDir: 'main' },
   define: { 'process.env': {} },
   base: './', // 打包路径
   server: {

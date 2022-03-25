@@ -1,0 +1,34 @@
+{
+  "name": "serve",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start:4000": "node bin/www4000",
+    "dev:4000": "./node_modules/.bin/nodemon bin/www4000",
+    "prd:4000": "pm2 start bin/www4000",
+    "start:4001": "node bin/www4001",
+    "dev:4001": "./node_modules/.bin/nodemon bin/www4001",
+    "prd:4001": "pm2 start bin/www4001",
+    "start:4002": "node bin/www4002",
+    "dev:4002": "./node_modules/.bin/nodemon bin/www4002",
+    "prd:4002": "pm2 start bin/www4002",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "ejs": "~2.3.3",
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.0",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.0",
+    "koa2-cors": "^2.0.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}

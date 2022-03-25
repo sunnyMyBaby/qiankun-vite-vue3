@@ -76,7 +76,8 @@ export default defineConfig({
     jsxInject: "import { h } from 'vue';"
   },
   define: { 'process.env': {} },
-  base: './', // 打包路径
+  // base: './',
+  base: '//localhost:4002/', // 正确
   build: {
     target: 'esnext',
     outDir: 'micro-b',

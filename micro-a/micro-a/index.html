@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="//localhost:4001/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+    <!-- style placeholder -->
+    <script crossorigin="">import('//localhost:4001/micro-a.umd.js').finally(() => {
+            
+    const qiankunLifeCycle = window.moudleQiankunAppLifeCycles && window.moudleQiankunAppLifeCycles['micro-a'];
+    if (qiankunLifeCycle) {
+      window.proxy.vitemount((props) => qiankunLifeCycle.mount(props));
+      window.proxy.viteunmount((props) => qiankunLifeCycle.unmount(props));
+      window.proxy.vitebootstrap(() => qiankunLifeCycle.bootstrap());
+    }
+  
+          })</script>
+    <link rel="stylesheet" href="//localhost:4001/style.css">
+  </head>
+  <body>
+    <div id="micro-a"></div>
+    
+    <!-- script placeholder -->
+  
+<script>
+  const createDeffer = (hookName) => {
+    const d = new Promise((resolve, reject) => {
+      window.proxy && (window.proxy[`vite${hookName}`] = resolve)
+    })
+    return props => d.then(fn => fn(props));
+  }
+  const bootstrap = createDeffer('bootstrap');
+  const mount = createDeffer('mount');
+  const unmount = createDeffer('unmount');
+
+  ;(global => {
+    global.qiankunName = 'micro-a';
+    global['micro-a'] = {
+      bootstrap,
+      mount,
+      unmount,
+    };
+  })(window);
+</script></body></html>

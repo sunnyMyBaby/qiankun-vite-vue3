@@ -13,14 +13,14 @@ const getApps = (props?: {
      */
   {
     name: 'micro-a',
-    entry: 'http://localhost:4001',
+    entry: '//localhost:4001',
     container: '#mainwrapper',
     activeRule: '#/micro-a',
     props: { data: { ...props } }
   },
   {
     name: 'micro-b',
-    entry: 'http://localhost:4002',
+    entry: '//localhost:4002',
     container: '#mainwrapper',
     activeRule: '#/micro-b',
     props: { data: { ...props } }

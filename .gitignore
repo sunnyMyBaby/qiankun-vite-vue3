@@ -1,5 +1,6 @@
 base-project/node_modules
 micro-a/node_modules
 micro-b/node_modules
+serve/node_modules
 DS_Store
 .vscode
